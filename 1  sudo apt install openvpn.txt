@@ -1,0 +1,104 @@
+ 1  sudo apt install openvpn
+    2  ls
+    3  cd Desktop
+    4  sudo openvpn TIMEPASSUSER123.ovpn
+    5  sudoi
+    6  sudo
+    7  ls
+    8  pwd
+    9  ls
+   10  sudo
+   11  pwd
+   12  /root
+   13  ls
+   14  sudo /opt
+   15  sudo /.opt
+   16  cd 
+   17  pwd
+   18  cd /opt
+   19  ls
+   20  sudo git clone https://github.com/Dewalt-arch/pimpmykali.git
+   21  cd pimpmykali
+   22  ls
+   23  sudo ./pimpmykali.sh
+   24  sudo su
+   25  home
+   26  ./root
+   27  /root
+   28  mkdir ibrahim
+   29  mkdir mohammed
+   30  mkdir shafi
+   31  mkdir khan
+   32  ls
+   33  cd khan
+   34  touch londobn1
+   35  ls
+   36  rename folder
+   37  mkdir khan1 sub folder
+   38  ls
+   39  ls.a
+   40  ls a
+   41  pwd
+   42  /home
+   43  /
+   44  /ROOT
+   45  sud su user
+   46  /root
+   47  pwd
+   48  ls
+   49  /home/kali/KHAN
+   50  ls
+   51  /homw
+   52  /home
+   53  ls
+   54  homw
+   55  /homw
+   56  /home
+   57  ls
+   58  pwd
+   59  sudo su
+   60  /homw
+   61  /home
+   62  ls
+   63  /
+   64  /home/kali
+   65  ls
+   66  cd khan
+   67  /home/kali
+   68  ls
+   69  cd mohammed
+   70  ls
+   71  pwd
+   72  cp moammed.text /home/kali/ibrahim
+   73  ls
+   74  cd..
+   75  cd ..
+   76  ls
+   77  cd mohammed
+   78  cd ibrahim
+   79  cd ..
+   80  cd ibrahim
+   81  ls
+   82  /homw
+   83  history
+   84  history ls
+   85  history all
+   86  /homwe
+   87  ls
+   88  cd ..
+   89  ls
+   90  pwd
+   91  mv shafi /home/kali/ibrahim
+   92  ls
+   93  cd ibrahim
+   94  ls
+   95  cd mohammed
+   96  cd ..
+   97  ls
+   98  /home
+   99  ls
+  100  cd kali
+  101  ls
+  102  cd mohammed
+  103  ls
+  104  cd subnew

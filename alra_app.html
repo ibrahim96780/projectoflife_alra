@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALRA TV: The Unified Global Platform</title>
+    <!-- Chosen Palette: Calm & Harmonious (Warm Neutrals) -->
+    <!-- Application Structure Plan: The SPA is structured as a top-down narrative, starting with the high-level universal vision and its foundational metrics. It then splits into a dual-path exploration of the core user experience: "Streaming Excellence" and "Unified Connection." This side-by-side structure allows users to compare and understand the two key pillars of the platform. The narrative then converges to explain the underlying global technology, the sustainability model, and finally, the phased roadmap. This design transforms two detailed reports into a single, cohesive, and digestible story, guiding the user from the "why" to the "how" and "what's next." -->
+    <!-- Visualization & Content Choices: 
+        - Key Metrics (Subscribers/Videos): Goal: Inform -> Viz: Single Big Number -> Justification: High-impact display of current success to establish credibility. Method: HTML/Tailwind.
+        - Mobile Frameworks: Goal: Compare -> Viz: Horizontal Bar Chart -> Justification: Clearly compares Flutter and React Native on key development metrics. Library: Chart.js (Canvas).
+        - Social Media Aggregation: Goal: Organize -> Viz: Icon Flow Diagram -> Justification: Visually demonstrates the core concept of consolidating multiple social feeds into one hub. Method: HTML/CSS with Unicode icons.
+        - Translation Strategy: Goal: Compare -> Viz: Doughnut Chart -> Justification: Effectively illustrates the composition of the hybrid AI/Human translation approach. Library: Chart.js (Canvas).
+        - Monetization Model: Goal: Organize -> Viz: Venn-style Diagram -> Justification: Shows the supportive, overlapping relationship between Donations, Subscriptions, and Events in a non-SVG format. Method: HTML/CSS.
+        - Phased Roadmap: Goal: Change/Organize -> Viz: Vertical Timeline -> Justification: Provides a clear, chronological view of the project's development stages. Method: HTML/CSS.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. 
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdf6e3; /* Warm Neutral - Solarized Light */
+            color: #657b83; /* Solarized Text */
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #cb4b16, #b58900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .section-icon {
+            font-size: 3rem;
+            line-height: 1;
+            color: #cb4b16; /* Solarized Orange */
+        }
+        .stat-card {
+            background-color: #eee8d5; /* Solarized Base1 */
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #93a1a1;
+        }
+        .content-card {
+             background-color: #fdf6e3;
+             border-radius: 12px;
+             padding: 2rem;
+             border: 1px solid #eee8d5;
+             height: 100%;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #b58900; /* Solarized Yellow */
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-container.left {
+            left: 0;
+        }
+        .timeline-container.right {
+            left: 50%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -14px;
+            background-color: #fdf6e3;
+            border: 4px solid #cb4b16; /* Solarized Orange */
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-container.right::after {
+            left: -11px;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #eee8d5;
+            position: relative;
+            border-radius: 6px;
+            border: 1px solid #93a1a1;
+        }
+        .social-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #eee8d5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #93a1a1;
+            font-size: 1.75rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-[#eee8d5] py-12 px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-[#586e75]">
+            One Platform for <span class="gradient-text">All Humanity</span>
+        </h1>
+        <p class="text-lg md:text-xl text-[#657b83] max-w-3xl mx-auto">
+            A strategic vision for a unified digital sanctuary: combining world-class streaming with seamless global communication for the ALRA TV community.
+        </p>
+    </header>
+
+    <main class="py-12 md:py-20 px-4">
+        <div class="max-w-7xl mx-auto space-y-20">
+
+            <section>
+                <div class="text-center mb-12">
+                    <div class="section-icon">🌟</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 text-[#586e75]">The Universal Vision & Current Foundation</h2>
+                    <p class="mt-4 text-lg text-[#657b83] max-w-3xl mx-auto">To create a singular, welcoming space where every individual can connect with profound spiritual insights. This vision is built upon a strong, existing foundation of global engagement.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="stat-card">
+                        <div class="text-6xl font-extrabold gradient-text">1.52M+</div>
+                        <div class="text-xl font-semibold text-[#586e75] mt-2">Global Subscribers</div>
+                        <p class="text-[#657b83] mt-2">A powerful, established community ready to embrace the new platform.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="text-6xl font-extrabold gradient-text">3,300+</div>
+                        <div class="text-xl font-semibold text-[#586e75] mt-2">Spiritual Discourses</div>
+                        <p class="text-[#657b83] mt-2">A vast library of wisdom forming the core of the on-demand experience.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                 <div class="text-center mb-12">
+                    <div class="section-icon">🤝</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 text-[#586e75]">The Core Experience: Streaming & Connection</h2>
+                    <p class="mt-4 text-lg text-[#657b83] max-w-3xl mx-auto">The platform's heart is a dual experience: providing spiritual content with the polish of leading streaming services, and fostering deep connection through a unified communication hub.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold text-center mb-6 text-[#586e75]">Streaming Excellence</h3>
+                        <p class="text-center mb-8 text-[#657b83]">An intuitive, world-class viewing experience inspired by industry leaders, designed to make profound spiritual content accessible and engaging.</p>
+                        <h4 class="text-lg font-semibold text-center mb-4 text-[#586e75]">Mobile Development Frameworks</h4>
+                        <p class="text-center text-sm text-[#657b83] mb-4">A cross-platform approach accelerates development. Here's how leading frameworks compare on key metrics for building a high-quality app for both iOS & Android from one codebase.</p>
+                        <div class="chart-container">
+                            <canvas id="frameworksChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="content-card">
+                        <h3 class="text-2xl font-bold text-center mb-6 text-[#586e75]">Unified Connection</h3>
+                        <p class="text-center mb-8 text-[#657b83]">A single point of contact to manage all social media interactions and provide direct support, eliminating fragmentation and fostering direct connection.</p>
+                        <h4 class="text-lg font-semibold text-center mb-4 text-[#586e75]">Social Media Aggregation</h4>
+                         <p class="text-center text-sm text-[#657b83] mb-4">All messages, comments, and mentions flow into one centralized hub, allowing for streamlined communication and effortless response management.</p>
+                         <div class="flex justify-center items-center gap-4 mt-6 flex-wrap">
+                            <div class="social-circle" style="color: #25D366;">✆</div>
+                            <div class="social-circle" style="color: #1877F2;">Ⓕ</div>
+                            <div class="social-circle" style="color: #C13584;">📸</div>
+                            <div class="text-3xl font-bold mx-2 text-[#b58900]">&rarr;</div>
+                             <div class="p-4 rounded-lg text-center" style="background-color: #fdf6e3; border: 2px dashed #cb4b16;">
+                                <div class="text-3xl mb-2">📥</div>
+                                <div class="font-bold text-[#586e75]">Unified Inbox</div>
+                             </div>
+                             <div class="text-3xl font-bold mx-2 text-[#b58900]">&rarr;</div>
+                             <button class="bg-gradient-to-r from-[#cb4b16] to-[#b58900] text-white px-4 py-2 rounded-full font-semibold">Video Call</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="text-center mb-12">
+                    <div class="section-icon">🌍</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 text-[#586e75]">Global Technology for a Universal Message</h2>
+                    <p class="mt-4 text-lg text-[#657b83] max-w-2xl mx-auto">Leveraging cutting-edge technology to deliver a seamless, multi-language experience to a worldwide audience, ensuring the spiritual message transcends all borders.</p>
+                </div>
+                <div class="bg-[#eee8d5] p-8 rounded-lg border border-[#93a1a1]">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-[#586e75]">Real-time Translation Strategy</h3>
+                    <p class="text-center text-[#657b83] mb-6 max-w-3xl mx-auto">A hybrid approach is vital for global outreach. High-quality human interpretation can be used for key live events, while scalable AI translation provides broad language support for on-demand content and daily streams. This balances quality, cost, and reach.</p>
+                    <div class="chart-container">
+                        <canvas id="translationChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="text-center mb-12">
+                    <div class="section-icon">🛡️</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 text-[#586e75]">Sustainability & Protection</h2>
+                    <p class="mt-4 text-lg text-[#657b83] max-w-2xl mx-auto">Ensuring the long-term viability and integrity of the mission through a balanced monetization strategy and robust content protection.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div class="content-card">
+                        <h3 class="text-xl font-bold text-center mb-4 text-[#586e75]">Hybrid Monetization Model</h3>
+                        <p class="text-center text-[#657b83] mb-6">Combining community support with premium offerings creates a sustainable model where core teachings remain accessible to all.</p>
+                         <div class="flex justify-center items-center gap-4 mt-8 flex-wrap">
+                            <div class="text-center p-4 border-2 border-dashed border-[#2aa198] rounded-full">Donations</div>
+                            <div class="text-center p-4 border-2 border-dashed border-[#b58900] rounded-full">Subscriptions</div>
+                            <div class="text-center p-4 border-2 border-dashed border-[#cb4b16] rounded-full">Paid Events</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3 class="text-xl font-bold text-center mb-4 text-[#586e75]">Content & IP Protection</h3>
+                        <p class="text-center text-[#657b83] mb-6">Using multi-DRM technology to prevent unauthorized sharing, and clear legal strategies to protect trademarks and copyrighted modern translations of sacred texts.</p>
+                        <div class="flex justify-center items-center gap-6 mt-8 flex-wrap">
+                             <div class="text-center"><span class="text-4xl text-[#cb4b16]">©</span><p class="font-semibold">Copyright</p></div>
+                             <div class="text-center"><span class="text-4xl text-[#b58900]">™</span><p class="font-semibold">Trademark</p></div>
+                             <div class="text-center"><span class="text-4xl text-[#2aa198]">🔑</span><p class="font-semibold">DRM</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="text-center mb-12">
+                    <div class="section-icon">🚀</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 text-[#586e75]">The Journey Ahead: A Phased Rollout</h2>
+                    <p class="mt-4 text-lg text-[#657b83] max-w-2xl mx-auto">A strategic, phased approach ensures iterative development, risk mitigation, and sustainable growth towards the full vision.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-container left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#cb4b16]">Phase 1: Discovery & Planning</h3>
+                            <p class="text-sm font-semibold text-[#839496] mb-2">(Months 1-6)</p>
+                            <p class="text-[#657b83]">Define detailed requirements, select tech partners, formalize IP strategy, and create UX prototypes.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#b58900]">Phase 2: MVP Development</h3>
+                            <p class="text-sm font-semibold text-[#839496] mb-2">(Months 7-18)</p>
+                            <p class="text-[#657b83]">Build core streaming, unified inbox, initial multi-language AI, basic user profiles, and the cross-platform mobile app.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold" style="color:#2aa198">Phase 3: Enhancement & Expansion</h3>
+                             <p class="text-sm font-semibold text-[#839496] mb-2">(Ongoing)</p>
+                            <p class="text-[#657b83]">Add advanced features, expand languages, roll out monetization, and build community tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-[#586e75] text-[#eee8d5] text-center py-6 mt-20">
+        <p>&copy; 2025 ALRA TV Strategic Vision. A Unified Platform for a United World.</p>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const chartFontColor = '#657b83';
+
+        const ctxFrameworks = document.getElementById('frameworksChart').getContext('2d');
+        new Chart(ctxFrameworks, {
+            type: 'bar',
+            data: {
+                labels: [['Native', 'Performance'], ['UI', 'Customization'], ['Single', 'Codebase'], ['Faster', 'Development']],
+                datasets: [
+                    {
+                        label: 'Flutter',
+                        data: [95, 92, 100, 90],
+                        backgroundColor: '#b58900',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'React Native',
+                        data: [85, 75, 100, 88],
+                        backgroundColor: '#cb4b16',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { color: '#93a1a130' },
+                        ticks: { color: chartFontColor, font: { size: 10 } }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: chartFontColor, font: { size: 12 }}
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { color: chartFontColor }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctxTranslation = document.getElementById('translationChart').getContext('2d');
+        new Chart(ctxTranslation, {
+            type: 'doughnut',
+            data: {
+                labels: ['AI Translation (Broad Reach & VOD)', 'Human Interpretation (Key Live Events)'],
+                datasets: [{
+                    label: 'Translation Solutions',
+                    data: [75, 25],
+                    backgroundColor: ['#2aa198', '#cb4b16'],
+                    borderColor: '#fdf6e3',
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: chartFontColor,
+                            font: { size: 12 },
+                            boxWidth: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback,
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+    </script>
+
+</body>
+</html>
